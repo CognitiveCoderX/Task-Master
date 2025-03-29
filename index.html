@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Simple Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TaskMaster <span class="subtitle">Your Personal Task Manager</span></h1>
+        </header>
+        
+        <div class="task-form">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <select id="taskPriority">
+                <option value="low">Low Priority</option>
+                <option value="medium" selected>Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <button id="addTaskBtn"><i class="fas fa-plus"></i> Add Task</button>
+        </div>
+        
+        <div class="task-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        
+        <div class="task-stats">
+            <div class="stat-box">
+                <span id="totalTasks">0</span>
+                <p>Total Tasks</p>
+            </div>
+            <div class="stat-box">
+                <span id="pendingTasks">0</span>
+                <p>Pending</p>
+            </div>
+            <div class="stat-box">
+                <span id="completedTasks">0</span>
+                <p>Completed</p>
+            </div>
+        </div>
+        
+        <div class="task-list-container">
+            <h2>Your Tasks <span id="currentDate"></span></h2>
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
